@@ -1,0 +1,33 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class GameManager : MonoBehaviour
+{
+    public int vida = 10;
+    public bool tieneLlave = false;
+
+    void Start()
+    {
+        Debug.Log(gameObject.name);
+        
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            Debug.Log("la barra espaciadora fue presionada :v ");
+            if (tieneLlave == true && vida >= 5)
+            {
+                Debug.Log("puedes entrar a la mazmorra");
+            }
+            else
+            {
+                Debug.Log("git gud");
+            }
+        }
+
+    }
+}
