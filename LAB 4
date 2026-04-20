@@ -1,0 +1,94 @@
+EJERCICIO 1
+using UnityEngine;
+
+public class Ejercicio1 : MonoBehaviour
+{
+    public int energiaActual = 20;
+    public int costoHabilidad = 10;
+
+
+    void Start()
+    {
+        int energiaRestante = energiaActual - costoHabilidad;
+        Debug.Log("Energia restante: " + energiaRestante);
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+EJERCICIO 2
+
+using UnityEngine;
+
+public class Ejercicio2 : MonoBehaviour
+{
+    public bool tieneLlave = false;
+    public bool espacioDisponible = false;
+
+    void Start()
+    {
+        bool puedeAbrir = tieneLlave && espacioDisponible;
+
+        if (puedeAbrir)
+        {
+            Debug.Log("Has abierto el cofre");
+        }
+        else
+        {
+            Debug.Log("No puedes abrir el cofre");
+
+        }
+    }
+        
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+EJERCICIO 2
+
+
+
+using UnityEngine;
+
+public class Ejercicio3 : MonoBehaviour
+{
+    public int vidaActual;
+    public int dañoRecibido;
+
+    void Start()
+    {
+        int vidaRestante = vidaActual - dañoRecibido;
+
+        if (dañoRecibido < 30)
+        {
+            Debug.Log("jugador estable");
+        }
+
+        else if (vidaRestante >= 1 && vidaRestante <= 30)
+        {
+            Debug.Log("Jugador en peligro");
+        }
+        else
+        {
+            Debug.Log("game over");
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
